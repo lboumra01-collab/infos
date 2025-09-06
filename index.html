@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Simulation CFE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🔍 Questionnaire CFE</h1>
+    <p>Remplissez les champs ci-dessous pour estimer votre Cotisation Foncière des Entreprises (CFE) et découvrir si vous êtes éligible à une exonération.</p>
+
+    <form id="cfeForm">
+      <label>Email :
+        <input type="email" name="email" required />
+      </label>
+
+      <label>Chiffre d'affaires N-2 (€) :
+        <input type="number" name="caN2" required />
+      </label>
+
+      <label>Montant de CFE payé l’an dernier (€) :
+        <input type="number" name="cfePaye" required />
+      </label>
+
+      <label>Zone géographique :
+        <select name="zone">
+          <option value="aucune">Aucune</option>
+          <option value="ZFU">ZFU</option>
+          <option value="ZRR">ZRR</option>
+          <option value="AFR">AFR</option>
+        </select>
+      </label>
+
+      <label>Nouvelle entreprise (moins de 1 an) ?
+        <select name="nouvelle">
+          <option value="non">Non</option>
+          <option value="oui">Oui</option>
+        </select>
+      </label>
+
+      <button type="submit">Estimer ma CFE</button>
+    </form>
+
+    <div id="resultat" class="hidden"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
